@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Schin Lab - Research And Development</title>
+	<meta name="author" content="Aiden In" />
+
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="../jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+	<link rel="stylesheet" type="text/css" href="../asset/css/style.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+ 
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="../vendors/scrolloverflow.js"></script>
+
+	<script type="text/javascript" src="../jquery.fullPage.js"></script>
+	<script type="text/javascript" src="examples.js"></script>
+    
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['main', 'about', 'design','data','contact'],
+				sectionsColor: ['#000', '#000', '#fff','#fff','#000'],
+				css3: true,
+                navigation: true,
+				navigationPosition: 'right',
+				navigationTooltips: ['Main', 'About', 'Design','Data','Contact'],
+                afterLoad: function(anchorLink, index){
+                    var loadedSection = $(this);
+                    if (index == 1) {
+                        $("#footer").hide();
+                        $(".nav-link").hide(); 
+                        $("#header").hide();
+                      
+                    } else if ( index == 5 ) {
+                        $("#footer").show();
+                    } else {
+                        $("#header").show();
+                        $("#footer").hide(); 
+                        $("#fp-nav").show();
+                        $(".nav-link").show(); 
+                    }
+                },
+                onLeave: function(index, nextIndex, direction){
+                    var leavingSection = $(this);
+                    if(index == 1 && direction =='down'){
+                        
+                    }
+                }
+			});
+            
+		});
+	</script>
+
+</head>
+<body>
+
+
+
+
+<div id="header">
+    <img class="logo-mobile" src="asset/img/schinlab_black.svg">
+    <a class="nav-link" href="##">
+        <div class="nav">           
+        </div>
+    </a>
+    <div class="fullmenu">
+        <div class="col-sm-4 menu-content-left">
+            <img class="logo-menu" src="asset/img/schinlab_black.svg">
+            <br>
+            <ul class="menu">
+                    <li class="menu-list"><a class="menu-link" href="#main">HOME</a></li>
+                    <li class="menu-list"><a class="menu-link" href="#about">ABOUT US</a></li>
+                    <li class="menu-list"><a class="menu-link" href="#design">DESIGN</a></li>
+                    <li class="menu-list"><a class="menu-link" href="#data">DATA</a></li>
+                    <li class="menu-list"><a class="menu-link" href="#contact">CONTACT US</a></li>
+            </ul>
+           
+        </div>
+        <div class="col-sm-8 menu-content-right">  
+            <!--<h5 class="dash-title bright">CHECK OUT OUR LATEST WORKS</h5>-->
+            <div class="row portfolio-title">
+                <div class="col-sm-10">
+                <p class="quote">
+                "Simple solutions seldom are. It takes a very unusual mind to undertake analysis of the obvious."
+                </p>
+                <h5 class="dash-title right-aligned">- Alfred North Whitehead</h5>
+                </div>    
+            </div>
+           
+            <div class="row portfolio-link">
+                <div class="col-sm-10">
+                <h4 class="title">CHECK OUT OUR LATEST PROJECTS:</h4>
+                <a href="http://creative.schinlab.com"><img class="logo-small" src="asset/img/schincreative@2x.png"></a>   
+                    <a href="http://data.schinlab.com"><img class="logo-small" src="asset/img/schindata@2x.png"></a> 
+                </div>    
+            </div>
+           
+            
+            
+        </div>
+    </div>
+
+</div>
+<div id="footer">
+    <!--<a href="#" class="link-item" id="creative">Schin Creative</a>
+    <a href="#" class="link-item" id="data">Schin Data</a>-->
+    © Copryright 2017. Schinlab.com
+
+</div>
+
+<div id="fullpage">
+	<div class="section " id="section0">
+		<div class="intro">
+			
+            <img class="logo-big" src="asset/img/schinlab.svg">
+		</div>
+        <button aria-describedby="next-paddle-description" ref="button" class="scrolldown"><span class="text">SCROLL TO CONTINUE</span><br><img src="asset/img/caretdown.svg"></button>
+	</div>
+	<div class="section" id="section1">
+	
+			<div class="intro">
+                <div class="row">
+                    <div class="col-md-1 dash bright no-padding">
+                        <hr>
+                        <!--<h2>
+                        Fear is the emotion that makes us blind
+                        </h2>-->
+                    </div>
+                    <div class="col-md-11 left-aligned">
+                        <h5 class="dash-title bright">About Schin Lab</h5>
+                        <h1 class="main-title">A web-presence that stays true to your vison</h1>
+                        <p class="main-content">
+                        With headquarters in Edmonton and an office in Victoria, Schinlab provides web development, design, and digital marketing services for professional clients and businesses of all sizes. We combine the latest technologies with established design and marketing principles. Take a look at our portfolio. We are proud of our work and we believe it speaks for itself.
+                        </p>
+                    </div>           
+                </div>
+			</div>
+		
+
+	</div>
+	<div class="section" id="section2">
+		<div class="intro">
+                <div class="row">
+                    <div class="col-md-1 dash no-padding">
+                        <hr>
+                    </div>
+                    <div class="col-md-11 left-aligned">
+                        <h5 class="dash-title">What We Do</h5>
+                        <h1 class="main-title dark">Branding & Web Development</h1>
+                        <p class="main-content">
+                        Schin Lab is a full service digital marketing agency that delivers projects throughout Canada and overseas. Our creative offerings include brand design and web development that is not only beautiful, but also beautifully simple. We listen to our customers to create products that meet their unique needs. Customer satisfaction is at the heart of what we do, and we do it well.
+                        </p>
+                        <a href="http://creative.schinlab.com" class="external-link" target="_blank">EXPLORE <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                    </div>           
+                </div>
+			</div>
+	</div>
+    <div class="section" id="section3">
+        <div class="intro">
+                <div class="row">
+                    <div class="col-md-1 dash no-padding">
+                        <hr>
+                    </div>
+                    <div class="col-md-11 left-aligned">
+                        <h5 class="dash-title">What We Do</h5>
+                        <h1 class="main-title dark">Data Analysis & Visualization</h1>
+                        <p class="main-content">
+                        Your data can tell a story, but you need professional storytellers to help ensure that your intended message hits its target audience. Schin Lab creates static and dynamic visualizations, dashboards, and reports that convey evidence-based messages to your most important stakeholders. We can integrate your data with your website or develop projects individually. Talk to us and we'll bring your data to life.
+                        </p>
+                        <a href="http://data.schinlab.com" class="external-link" target="_blank">EXPLORE <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                    </div>           
+                </div>
+			</div>
+	</div>
+    <div class="section" id="section4">
+        <div class="intro">
+                <div class="row">
+                    <div class="col-md-1 dash bright no-padding">
+                        <hr>
+                    </div>
+                    <div class="col-md-11 left-aligned">
+                        <h5 class="dash-title bright">Contact Us</h5>
+                        <h1 class="main-title">Let's Get in Touch</h1>
+                        <p class="main-content">
+                         We would love to work with you. If you’re looking for digital projects from a company that know how to deliver, drop us a line. Let’s talk about it. If you can imagine it, we can build it.
+                        </p>    
+                        <br>
+                        <span class="subtitle bright">ADDRESS</span>
+                        <p class="list-content">
+                        Schinlab.com is located in Edmonton and Victoria, Canada.
+                        </p>
+                        <span class="subtitle bright">EMAIL</span>
+                        <p class="list-content">
+                            <a class="contact-link" href="mailto:contact@schinlab.com">contact@schinlab.com</a>
+                        </p>
+                        <span class="subtitle bright">PHONE</span>
+                        <p class="list-content">
+                        587-334-8694
+                        </p>
+                    </div>           
+                </div>
+			</div>
+	</div>
+</div>
+
+
+</body>
+    
+    
+    
+
+
+<script>
+$(document).ready(function(){   
+        $(".logo-big").fadeIn(2500);
+        $(".scrolldown").fadeIn(3500);
+        
+});
+</script>   
+<script>
+$(document).on('click', '.scrolldown', function(){
+  $.fn.fullpage.moveSectionDown();
+});
+      
+</script>  
+<script>
+$(document).ready(function(){ 
+    $(".btn").click(function() { 
+        $(".tp").toggleClass("down");
+         $(".bt").toggleClass("up");
+    });
+});
+</script>
+<script>
+// hamburger nav
+$(document).ready(function(){ 
+    $('.nav-link').bind('click', function(){
+      $('.nav').toggleClass('activenav');
+      $('.menu').toggleClass('active');
+      $('.fullmenu').toggleClass('active');
+    })
+});
+</script>
+<script>
+
+$(document).ready(function(){ 
+    $('.menu-link').bind('click', function(){
+      $('.fullmenu').toggleClass('active');
+      $('.nav').toggleClass('activenav');
+      $('.menu').toggleClass('active');
+    
+    })
+});
+</script>
+</html>
